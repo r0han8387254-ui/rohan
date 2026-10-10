@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
 import {
   ArrowRight, Download, Github, Linkedin, Mail, GraduationCap, BarChart3, Code2, Rocket,
@@ -10,9 +10,9 @@ import { profile, skillGroups, education, projects } from "@/data/portfolio";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Rohan Borde — Software Developer Portfolio" },
+      { title: "Rohan Borde â€” Software Developer Portfolio" },
       { name: "description", content: "Rohan Borde: Java & Python developer and CS student at JSPM Rajarshi Shahu College of Engineering (9.5 CGPA)." },
-      { property: "og:title", content: "Rohan Borde — Software Developer Portfolio" },
+      { property: "og:title", content: "Rohan Borde â€” Software Developer Portfolio" },
       { property: "og:description", content: "Java & Python developer building practical software. Explore projects, skills and get in touch." },
     ],
   }),
@@ -61,7 +61,7 @@ function Typing({ words }: { words: string[] }) {
   }, [text, del, i, words]);
   return (
     <span className="font-mono text-primary">
-      {text}<span className="caret">▍</span>
+      {text}<span className="caret">â–</span>
     </span>
   );
 }
@@ -151,9 +151,9 @@ function Index() {
               <span className="relative flex h-2 w-2"><span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-success opacity-75" /><span className="relative h-2 w-2 rounded-full bg-success" /></span>
               Available for Opportunities
             </span>
-            <p className="mt-6 text-lg text-muted-foreground">Hi, I'm <span className="font-semibold text-foreground">Rohan Borde.</span></p>
+            <p className="mt-6 text-lg text-muted-foreground">Hi, I'm <span className="font-semibold text-foreground">Rohan Pratamesh Borde.</span></p>
             <h1 className="mt-2 text-4xl font-bold leading-[1.05] sm:text-6xl">
-              Building the Future, <span className="text-gradient">One Line of Code</span> at a Time.
+              I am the best code editor.<span className="text-gradient">One Line of Code</span> at a Time.
             </h1>
             <p className="mt-5 h-7 text-lg"><span className="text-muted-foreground">&gt; </span><Typing words={profile.roles} /></p>
             <p className="mt-4 max-w-xl text-muted-foreground">
@@ -164,7 +164,7 @@ Hi, I'm Rohan Borde, a student at JSPM passionate about coding and building proj
                 Explore My Work <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
               <a href={profile.resumeUrl || "#contact"} {...(profile.resumeUrl ? { download: true } : {})}
-                title={profile.resumeUrl ? undefined : "Resume coming soon — reach out via contact"}
+                title={profile.resumeUrl ? undefined : "Resume coming soon â€” reach out via contact"}
                 className="glass inline-flex items-center gap-2 rounded-xl px-5 py-3 font-semibold transition-colors hover:text-primary">
                 <Download className="h-4 w-4" /> Download Resume
               </a>
@@ -191,7 +191,7 @@ Hi, I'm Rohan Borde, a student at JSPM passionate about coding and building proj
         </section>
 
         {/* About */}
-        <Section id="about" eyebrow="01 · About" title={<>A Little <span className="text-gradient">About Me</span></>}>
+        <Section id="about" eyebrow="01 Â· About" title={<>A Little <span className="text-gradient">About Me</span></>}>
           <div className="grid gap-8 lg:grid-cols-[1.2fr_1fr]">
             <div className="reveal space-y-4 text-lg text-muted-foreground">
               <p>I'm a student at <span className="text-foreground">{profile.college}</span>, with a strong interest in programming, software development, and database technologies.</p>
@@ -219,7 +219,7 @@ Hi, I'm Rohan Borde, a student at JSPM passionate about coding and building proj
         </Section>
 
         {/* Skills */}
-        <Section id="skills" eyebrow="02 · Skills" title={<>My <span className="text-gradient">Tech Stack</span></>}>
+        <Section id="skills" eyebrow="02 Â· Skills" title={<>My <span className="text-gradient">Tech Stack</span></>}>
           <div className="grid gap-6 md:grid-cols-2">
             {skillGroups.map((g) => (
               <div key={g.title} className="glass reveal rounded-3xl p-6">
@@ -241,7 +241,7 @@ Hi, I'm Rohan Borde, a student at JSPM passionate about coding and building proj
         </Section>
 
         {/* Education */}
-        <Section id="education" eyebrow="03 · Education" title={<>Academic <span className="text-gradient">Journey</span></>}>
+        <Section id="education" eyebrow="03 Â· Education" title={<>Academic <span className="text-gradient">Journey</span></>}>
           <div className="relative pl-10">
             <div aria-hidden className="bg-gradient-accent absolute bottom-0 left-3 top-0 w-px glow-cyan" />
             {education.map((e) => (
@@ -259,7 +259,7 @@ Hi, I'm Rohan Borde, a student at JSPM passionate about coding and building proj
         </Section>
 
         {/* Projects */}
-        <Section id="projects" eyebrow="04 · Projects" title={<>Featured <span className="text-gradient">Projects</span></>}>
+        <Section id="projects" eyebrow="04 Â· Projects" title={<>Featured <span className="text-gradient">Projects</span></>}>
           <div className="grid gap-6 md:grid-cols-3">
             {projects.map((p, i) => <ProjectCard key={i} p={p} i={i} />)}
           </div>
@@ -270,7 +270,7 @@ Hi, I'm Rohan Borde, a student at JSPM passionate about coding and building proj
         </Section>
 
         {/* Contact */}
-        <Section id="contact" eyebrow="05 · Contact" title={<>Let's Build Something <span className="text-gradient">Great Together</span></>}>
+        <Section id="contact" eyebrow="05 Â· Contact" title={<>Let's Build Something <span className="text-gradient">Great Together</span></>}>
           <p className="reveal -mt-6 mb-10 max-w-xl text-muted-foreground">Have an idea, opportunity, or project in mind? I'd love to connect.</p>
           <div className="grid gap-6 lg:grid-cols-[1fr_1.3fr]">
             <div className="space-y-4">
@@ -287,7 +287,7 @@ Hi, I'm Rohan Borde, a student at JSPM passionate about coding and building proj
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-10 sm:px-8 md:flex-row md:items-center md:justify-between">
           <div>
             <p className="font-medium">Designed & Built by Rohan Borde</p>
-            <p className="mt-1 text-sm text-muted-foreground">© {new Date().getFullYear()} · <span className="inline-flex items-center gap-1.5"><span className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary glow-cyan" /> Always Learning</span></p>
+            <p className="mt-1 text-sm text-muted-foreground">Â© {new Date().getFullYear()} Â· <span className="inline-flex items-center gap-1.5"><span className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary glow-cyan" /> Always Learning</span></p>
           </div>
           <nav className="flex flex-wrap gap-4 text-sm text-muted-foreground">
             {NAV.map((id) => <a key={id} href={`#${id}`} className="capitalize hover:text-primary">{id}</a>)}
@@ -385,9 +385,9 @@ function ContactForm() {
     if ((f.message ?? "").trim().length < 10) errs.message = "Message should be at least 10 characters";
     setErrors(errs);
     if (Object.keys(errs).length) { setStatus(""); return; }
-    const body = `${f.message}\n\n— ${f.name} (${f.email})`;
+    const body = `${f.message}\n\nâ€” ${f.name} (${f.email})`;
     window.location.href = `mailto:${profile.email}?subject=${encodeURIComponent(f.subject)}&body=${encodeURIComponent(body)}`;
-    setStatus("Your email app should now open with the message ready — just press send there.");
+    setStatus("Your email app should now open with the message ready â€” just press send there.");
   };
   const field = "w-full rounded-xl border bg-input/40 px-4 py-3 text-sm placeholder:text-muted-foreground focus:border-primary focus:outline-none";
   return (
