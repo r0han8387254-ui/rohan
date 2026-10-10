@@ -51,7 +51,7 @@ function Typing({ words }: { words: string[] }) {
   const [text, setText] = useState("");
   const [del, setDel] = useState(false);
   useEffect(() => {
-    const w = words[i % words.length];
+    const w = words[i % words.length] ?? "";
     const t = setTimeout(() => {
       if (!del && text === w) return setDel(true);
       if (del && text === "") { setDel(false); setI(i + 1); return; }
@@ -71,7 +71,7 @@ function Counter({ to }: { to: number }) {
   const [v, setV] = useState(0);
   useEffect(() => {
     const io = new IntersectionObserver(([e]) => {
-      if (!e.isIntersecting) return;
+      if (!e?.isIntersecting) return;
       io.disconnect();
       const start = performance.now();
       const step = (n: number) => {
