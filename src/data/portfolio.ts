@@ -1,7 +1,7 @@
 // Edit your personal details here — the whole site reads from this file.
 export const profile = {
   name: "Rohan Borde",
-  email: "rohanborde43@gmail.com",
+  email: "purveshmali6@gmail.com",
   github: "https://github.com/r0han8387254-ui/",
   linkedin: "https://www.linkedin.com/in/rohan-borde-5976b9338/",
   college: "JSPM Rajarshi Shahu College of Engineering",
