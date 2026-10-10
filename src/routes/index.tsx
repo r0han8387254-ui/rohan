@@ -157,11 +157,7 @@ function Index() {
             </h1>
             <p className="mt-5 h-7 text-lg"><span className="text-muted-foreground">&gt; </span><Typing words={profile.roles} /></p>
             <p className="mt-4 max-w-xl text-muted-foreground">
-<<<<<<< HEAD
-                I am A GAY
-=======
-            HII i am rohan i study at jspm and i am blue
->>>>>>> origin/main
+Hi, I'm Rohan Borde, a student at JSPM passionate about coding and building projects.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#projects" className="glow-cyan group inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 font-semibold text-primary-foreground transition-transform hover:scale-[1.03]">
