@@ -373,12 +373,12 @@ function ContactLink({ href, icon, label, value }: { href: string; icon: ReactNo
 }
 
 function ContactForm() {
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [errors, setErrors] = useState<Partial<Record<"name" | "email" | "subject" | "message", string>>>({});
   const [status, setStatus] = useState("");
   const submit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const f = Object.fromEntries(new FormData(e.currentTarget)) as Record<string, string>;
-    const errs: Record<string, string> = {};
+    const f = Object.fromEntries(new FormData(e.currentTarget)) as { name: string; email: string; subject: string; message: string };
+    const errs: Partial<Record<"name" | "email" | "subject" | "message", string>> = {};
     if (!f.name?.trim()) errs.name = "Please enter your name";
     if (!/^\S+@\S+\.\S+$/.test(f.email ?? "")) errs.email = "Please enter a valid email";
     if (!f.subject?.trim()) errs.subject = "Please add a subject";
@@ -406,7 +406,7 @@ function ContactForm() {
   );
 }
 
-function Field({ label, error, children }: { label: string; error?: string; children: ReactNode }) {
+function Field({ label, error, children }: { label: string; error?: string | undefined; children: ReactNode }) {
   return (
     <label className="block space-y-1.5">
       <span className="text-sm font-medium">{label}</span>
