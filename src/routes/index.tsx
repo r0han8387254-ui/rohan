@@ -151,13 +151,13 @@ function Index() {
               <span className="relative flex h-2 w-2"><span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-success opacity-75" /><span className="relative h-2 w-2 rounded-full bg-success" /></span>
               Available for Opportunities
             </span>
-            <p className="mt-6 text-lg text-muted-foreground">Hi, I'm <span className="font-semibold text-foreground">Rohan Pratamesh Borde.</span></p>
+            <p className="mt-6 text-lg text-muted-foreground">Hi, I'm <span className="font-semibold text-foreground">Rohan Kalyan Bhorde.</span></p>
             <h1 className="mt-2 text-4xl font-bold leading-[1.05] sm:text-6xl">
               I am the best code editor.<span className="text-gradient">One Line of Code</span> at a Time.
             </h1>
             <p className="mt-5 h-7 text-lg"><span className="text-muted-foreground">&gt; </span><Typing words={profile.roles} /></p>
             <p className="mt-4 max-w-xl text-muted-foreground">
-Hi, I'm Rohan Borde, a student at JSPM passionate about coding and building projects.
+I stay at Budhwar Peth, Pune. I am the best editor and the best code writer.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#projects" className="glow-cyan group inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 font-semibold text-primary-foreground transition-transform hover:scale-[1.03]">
